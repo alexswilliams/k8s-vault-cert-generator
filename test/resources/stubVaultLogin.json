@@ -1,0 +1,45 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/v1/auth/kubernetes/example-k8s-cluster/login"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "request_id": "1c99e67d-95dc-d17a-d197-c39c559afc68",
+            "lease_id": "",
+            "renewable": false,
+            "lease_duration": 0,
+            "data": null,
+            "wrap_info": null,
+            "warnings": null,
+            "auth": {
+                "client_token": "s.ZHAjX7b9ttb1S1Ca2lqYVwXV",
+                "accessor": "bQlE9cA5t7otFaB8gNheXHpY",
+                "policies": [
+                    "default",
+                    "kafka-pki-issue",
+                    "example-issue"
+                ],
+                "token_policies": [
+                    "default",
+                    "kafka-pki-issue",
+                    "example-issue"
+                ],
+                "metadata": {
+                    "role": "mocked-cert-issuer-role",
+                    "service_account_name": "mocked-cert-generator",
+                    "service_account_namespace": "example-k8s-namespace",
+                    "service_account_secret_name": "mocked-cert-generator-token-jg7bd",
+                    "service_account_uid": "aaaaaaaa-bbbb-cccc-dddd-112233445566"
+                },
+                "lease_duration": 600,
+                "renewable": true,
+                "entity_id": "f1bd3c0a-2897-d662-e66a-8278c1cd66b9",
+                "token_type": "service",
+                "orphan": true
+            }
+        }
+    }
+}
+

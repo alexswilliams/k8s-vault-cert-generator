@@ -1,0 +1,41 @@
+[
+  {
+    "VaultPath": "kafka-pki/kafka/example/prod/issue/consumer-a",
+    "CommonName": "Cert Gen Test",
+    "AltNames": [
+      "some-test-kafka-san.example.com"
+    ],
+    "TTL": "1h",
+    "OutputOptions": {
+      "Format": "PKCS12",
+      "FileNamePrefix": "pkcs12test-kafka-mtls",
+      "DestinationFolderPath": "/tmp/"
+    }
+  },
+  {
+    "VaultPath": "kafka-pki/kafka/example/prod/issue/consumer-b",
+    "CommonName": "Cert Gen Test",
+    "AltNames": [
+      "some-test-kafka-san.example.com"
+    ],
+    "TTL": "1h",
+    "OutputOptions": {
+      "Format": "PEM",
+      "FileNamePrefix": "pemtest-kafka-mtls",
+      "DestinationFolderPath": "/tmp/"
+    }
+  },
+  {
+    "VaultPath": "cert-issuer-mount/issue/example-ca",
+    "CommonName": "some-test-cn.example.com",
+    "AltNames": [
+      "some-other-test-cn.example.com",
+      "yet-more-test-cn.example.com"
+    ],
+    "OutputOptions": {
+      "Format": "PEM",
+      "FileNamePrefix": "web-tls",
+      "KubernetesSecretResourceName": "saving-to-secrets-not-yet-implemented"
+    }
+  }
+]
